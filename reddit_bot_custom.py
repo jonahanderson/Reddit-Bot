@@ -6,15 +6,15 @@ import datetime
 
 #Enter your correct Reddit information into the variable below
 
-userAgent = 'cryptotime'
+userAgent = ''
 
-cID = '5m836AlAJTTDfCL9dtJxfA'
+cID = ''
 
-cSC= 'iZA8k8o7sj93LOcInTxIRzQRG8YzJA'
+cSC= ''
 
-userN = 'justjoner'
+userN = ''
 
-userP ='G0pher10!'
+userP =''
 
 numFound = 0
 
