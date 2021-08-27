@@ -32,37 +32,50 @@ for submission in subreddit.stream.submissions():
 
 
 			numFound = numFound + 1
+			
+			print(" ")
 
-			print('Bot replying to: ') #replies and outputs to the command line
+			print('*NEW SUBMISSION*') #replies and outputs to the command line
 
 			print("Title: ", submission.title)
 
 			print(" ")
 
 			print("Text: ", submission.selftext)
+			
+			print(" --- ")
 
-			print("Score: ", submission.score)
+			print("Karma: ", submission.score)
 
 			print("SUBMISSION ID: ", submission.id)
 
-			print("SAVED???: ", submission.saved)
+			print("SUBMISSION SAVED?: ", submission.saved)
 
-			print(datetime.datetime.fromtimestamp(int(submission.created)).strftime('%Y-%m-%d %H:%M:%S'))
+			print("DATE AND TIME: ", datetime.datetime.fromtimestamp(int(submission.created)).strftime('%Y-%m-%d %H:%M:%S'))
 			
-			x = input("Some input please: ")
+			print(" --- ")
+			
+			x = input("Enter your comment: ")
+			
+			print(" ")
 
 			if x == ("SKIP"):
 				submission.save()
+				print("SKIPPING THIS POST")
+				
 
 			else: 
-				print('Bot saying: ', x)
+				print('Posting Comment: ', x)
 
 				submission.reply(x)
 				submission.save()
+				
+				print("")
+				print("Comment Posted")
 
-			print('GOING NEXT')
+			print('GOING TO NEXT POST')
 
-			print("NEW POST ------------------------------------------------ NEW POST")
+			print("NEW POST -------------------------------------------------------------------------------------- NEW POST")
 
 
 	else:
