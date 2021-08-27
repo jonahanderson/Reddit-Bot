@@ -72,6 +72,7 @@ for submission in subreddit.stream.submissions():
 				
 				print("")
 				print("Comment Posted")
+				print("")
 
 			print('GOING TO NEXT POST')
 
